@@ -1,12 +1,12 @@
 import React from 'react'
 import {Paper,Typography,Button,TextField,TextareaAutosize,Box} from '@mui/material'
-import {BookmarksOutlined,FileDownloadOutlined} from '@mui/icons-material'
+import {BookmarksOutlined,FileDownloadOutlined,FormatBold,FormatItalic,FormatUnderlined,FormatStrikethrough,FormatAlignJustify, FormatAlignLeft} from '@mui/icons-material'
 
 export default function TextArea() {
   return (
     <div>
-        <Paper sx={{p:1,display:"flex"}}>
-            <Typography variant='h5' sx={{color:"gray",p:1}}>1AVDcXSE</Typography>
+        <Paper sx={{display:"flex"}}>
+            <Typography variant='h6' sx={{color:"gray",p:1}}>1AVDcXSE</Typography>
             <Box sx={{marginLeft:"auto"}}>
               <Button sx={{color:"gray"}}>
                 <BookmarksOutlined />
@@ -16,7 +16,7 @@ export default function TextArea() {
               </Button>
             </Box>
           </Paper>
-          <Paper sx={{height:"90vh",mt:1,p:1}}>
+          <Paper sx={{mt:1,p:1,height:"70vh"}}>
           <TextField 
             variant='standard'
             placeholder='Write your Headline here'
@@ -25,8 +25,38 @@ export default function TextArea() {
           <TextareaAutosize
             aria-label="empty textarea"
             placeholder='Write or Paste Your Content Here'
-            style={{ width: "100%",height:"80vh",border:"none",resize:"none",padding:"10px","input & ::placeholder":{fontSize:"25px"} }}
+            style={{ width: "100%",height:"90%",border:"none",resize:"none",padding:"10px","input & ::placeholder":{fontSize:"25px"} }}
           />
+          </Paper>
+          <Paper sx={{mt:1,display:"flex",flexDirection:"row",overflow:"auto"}}>
+            <Box sx={{display:"flex",flexDirection:"row",overflow:"auto"}}>
+              <Button sx={{color:"#000"}} > 
+                <FormatBold  />
+              </Button>
+              <Button sx={{color:"#000"}}> 
+                <FormatItalic />
+              </Button>
+              <Button sx={{color:"#000"}}> 
+                <FormatUnderlined />
+              </Button>
+              <Button sx={{color:"#000"}}> 
+                <FormatStrikethrough />
+              </Button>
+              <Button sx={{color:"#000"}}> 
+                <Typography variant='h6' sx={{fontWeight:"bold"}}>H1</Typography>
+              </Button>              
+              <Button sx={{color:"#000"}}> 
+                <Typography variant='h6' sx={{fontWeight:"bold"}}>H2</Typography>
+              </Button>              
+              <Button sx={{color:"#000"}}> 
+                <FormatAlignJustify />
+              </Button>              
+              <Button sx={{color:"#000"}}> 
+                <FormatAlignLeft />
+              </Button>
+
+            </Box>
+
           </Paper>
     </div>
   )
