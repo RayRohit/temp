@@ -1,6 +1,7 @@
 import { Box, Paper, Tab, Tabs, Typography } from '@mui/material'
 import React, { useState } from 'react'
-import nodata from '../nodata.webp'
+// import nodata from '../nodata.webp'
+// import Tone from './Tone';
 
 function TabPanel(props){
   const {children,index,value} = props;
@@ -23,11 +24,12 @@ export default function Analysis() {
   }
   return (
     <div>
-      <Paper sx={{height:"79vh"}}>
+      <Paper>
           <Box sx={{width:"100%"}}>
             <Tabs value={value} TabIndicatorProps={{
               style:{
-                display:"none"
+                display:"none",
+                fontWeight:"bolder"
               }
             }} onChange={handleChange} aria-label=" tabs example">
                 <Tab label="AI Analysis" value={0}
@@ -53,7 +55,7 @@ export default function Analysis() {
           </Box>
           <TabPanel value={value} index={0}>
             <Box>
-              <Box component="img" src={nodata} alt="no data img" width="50%" />
+               {/* <Tone /> */}
             </Box>
           </TabPanel>
           <TabPanel value={value} index={1}>

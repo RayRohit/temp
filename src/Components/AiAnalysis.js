@@ -51,24 +51,6 @@ export default function AiAnalysis() {
         </Paper>
         <Paper sx={{height:"75vh",mt:1}}>
           <List sx={{p:4,height:"70vh",display:"flex",flexDirection:"column",justifyContent:"space-around"}}>
-            
-            {/* <ListItem sx={{
-              flexDirection:'column'
-            }}>
-            <Box sx={styles}>
-              <ListItemIcon>
-                <FiberManualRecordSharp sx={{color:"red",fontSize:"medium"}} />
-              </ListItemIcon>
-              <ListItemText sx={{fontWeight:"bolder"}}>
-                <Typography variant='h5' sx={{fontWeight:"bold"}}>HeadLine </Typography>
-              </ListItemText>
-            </Box>
-            <Box sx={styles}>
-              <ListItemText sx={{pl:7}}>
-              <Typography variant='h6' sx={{fontWeight:"bold",color:"orange"}}>Impact Score: </Typography>
-              </ListItemText>
-            </Box>
-              </ListItem> */}
 
             {
               data.map(item => {
@@ -77,28 +59,27 @@ export default function AiAnalysis() {
                   <div key={item.id}>
                     <ListItem  sx={{
                       flexDirection:'column'
-                    }}>
-                    <Box sx={styles}>
-                      <ListItemIcon>
-                        <FiberManualRecordSharp {...color} sx={{fontSize:"medium"}} />
-                      </ListItemIcon>
-                      <ListItemText sx={{fontWeight:"bolder"}}>
-                        <Typography variant='h5' sx={{fontWeight:"bold"}}>{item.name}</Typography>
-                      </ListItemText>
-                    </Box>
-                    <Box sx={styles}>
-                      <ListItemText sx={{pl:7}}>
-                      <Typography variant='h6'>{item.name === "Heading" ? <span style={{color:'orange', fontWeight:'bold'}}>Impact Scores: </span> : <span>0 Alert</span> } </Typography>
-                      </ListItemText>
-                    </Box>
-                    <Box sx={styles}>
-                      <ListItemText sx={{pl:7}}>
-                      {item.name !== "Heading" && <LinearProgress variant='determinate' {...color} sx={{backgroundColor:'#F5F5F5',borderRadius:"20px",padding:"4px"}} value={item.value} /> }
-                      </ListItemText>
-                    </Box>
-                      </ListItem>
-                      <ListItem>
+                      }}>
+                      <Box sx={styles}>
+                        <ListItemIcon>
+                          <FiberManualRecordSharp {...color} sx={{fontSize:"medium"}} />
+                        </ListItemIcon>
+                        <ListItemText sx={{fontWeight:"bolder"}}>
+                          <Typography variant='h5' sx={{fontWeight:"bold"}}>{item.name}</Typography>
+                        </ListItemText>
+                      </Box>
+                      <Box sx={styles}>
+                        <ListItemText sx={{pl:7}}>
+                        <Typography variant='h6'>{item.name === "Heading" ? <span style={{color:'orange', fontWeight:'bold'}}>Impact Scores: </span> : <span>0 Alert</span> } </Typography>
+                        </ListItemText>
+                      </Box>
+                      <Box sx={styles}>
+                        <ListItemText sx={{pl:7}}>
+                        {item.name !== "Heading" && <LinearProgress variant='determinate' {...color} sx={{backgroundColor:'#F5F5F5',borderRadius:"20px",padding:"4px"}} value={item.value} /> }
+                        </ListItemText>
+                      </Box>
                     </ListItem>
+
                   </div>
                 )
               })
