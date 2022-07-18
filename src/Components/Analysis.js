@@ -1,7 +1,7 @@
 import { Box, Paper, Tab, Tabs, Typography } from '@mui/material'
 import React, { useState } from 'react'
-// import nodata from '../nodata.webp'
-// import Tone from './Tone';
+import { AiRouting } from '../AiRouting/Airouting';
+
 
 function TabPanel(props){
   const {children,index,value} = props;
@@ -33,7 +33,7 @@ export default function Analysis() {
               }
             }} onChange={handleChange} aria-label=" tabs example">
                 <Tab label="AI Analysis" value={0}
-                sx={{fontWeight:"bolder",width:"50%","&:focus":{
+                sx={{fontSize:"16px",fontWeight:"bolder",width:"50%","&:focus":{
                   backgroundColor:"#F5F5F5",
                   color:"#FFD700"
                 },"&:active":{
@@ -43,7 +43,7 @@ export default function Analysis() {
                 
                 }} />
               <Tab label="Panel Analysis" value={1}
-               sx={{fontWeight:"bolder",width:"50%","&:focus":{
+               sx={{fontSize:"16px",fontWeight:"bolder",width:"50%","&:focus":{
                   backgroundColor:"#F5F5F5",
                   color:"#FFD700"
                 },"&:active":{
@@ -54,8 +54,10 @@ export default function Analysis() {
             </Tabs>
           </Box>
           <TabPanel value={value} index={0}>
-            <Box>
-               {/* <Tone /> */}
+            <Box sx={{width:'100%'}}>
+            {
+              AiRouting()
+            }
             </Box>
           </TabPanel>
           <TabPanel value={value} index={1}>

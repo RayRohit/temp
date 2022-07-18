@@ -3,11 +3,12 @@ import React from 'react';
 import TextArea from './Components/TextArea';
 import Analysis from './Components/Analysis';
 import AiAnalysis from './Components/AiAnalysis';
+import { GlobalState } from './GlobalState/GlobalState';
 
 function App() {
 
   return (
-    <>
+    <GlobalState>
     <Box sx={{
       p:1,backgroundColor:'#F5F5F5'
     }}>
@@ -23,7 +24,7 @@ function App() {
         </Grid>
       </Grid>
     </Box>
-    </>
+    </GlobalState>
   );
 }
 

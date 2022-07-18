@@ -78,7 +78,7 @@ export default function Tone() {
     const [accDisplay,setAccDisplay] = useState(true)
     const [dis,setDis] = useState('')
     const theme = useTheme()
-    const isSm = useMediaQuery(theme.breakpoints.down('sm'))
+    const isSm = useMediaQuery(theme.breakpoints.down('lg'))
 
     
     function handleBtnChange(item){
@@ -93,7 +93,7 @@ export default function Tone() {
   return (
     <ThemeProvider theme={themes}>
         <Box sx={{p:3}}>
-            <Typography variant='h4' sx={{color:"#1b5e20",fontWeight:"600"}}>Tone</Typography>
+            <Typography variant='h4' sx={{color:"#00e676",fontWeight:"600"}}>Tone</Typography>
             
                 {
                     button.map((item)=>{
@@ -187,7 +187,7 @@ export default function Tone() {
                                                     </ListItemText>
                                                 </ListItem>
                                             </>:<>
-                                            <Typography sx={{ width: '30%', flexShrink: 0 ,fontWeight:"bolder",}}>
+                                            <Typography sx={{ width: '30%', flexShrink: 0 ,fontWeight:"bolder"}}>
                                                 <ListItem >
                                                     <ListItemIcon><FiberManualRecord sx={{color:"#1b5e20"}}/></ListItemIcon>
                                                     <ListItemText>
